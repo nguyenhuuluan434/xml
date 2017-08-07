@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h1 id="demo">This is a Heading</h1>
+	<h1 id="abc">abc</h1>
+	<button type="button"
+	onclick="document.getElementById('demo').innerHTML = 'Hello World!'">Click Me! </button>
+	<button type="button"
+	onclick="getDataXml()">Test
+</button>
+
+<script type="text/javascript">
+	function getDataXml() {
+		xhttp = new XMLHttpRequest();
+		xhttp.open("GET", "xmldata.xml", false);
+		xhttp.send();
+		xmlDoc = xhttp.responseXML; 
+		
+		document.getElementByid('abc').innerHTML = xmlDoc.getElementsByTagName('author');
+	};
+
+
+</script>
+
+</body>
+</html>
