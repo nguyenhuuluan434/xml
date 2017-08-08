@@ -14,13 +14,14 @@
 	function getDataXml() {
 		xhttp = new XMLHttpRequest();
 		xhttp.open("GET", "xmldata.xml", false);
-		xhttp.send();
+		xhttp.setRequestHeader("Content-Type", "text/xml");
+		/*xhttp.setRequestHeader('Access-Control-Allow-Origin', 'http://127.0.0.1');
+		xhttp.setRequestHeader('Access-Control-Allow-Credentials', 'true');*/
+
+		xhttp.send(null);
 		xmlDoc = xhttp.responseXML; 
-		
-		document.getElementByid('abc').innerHTML = xmlDoc.getElementsByTagName('author');
+		document.getElementById('abc').innerHTML = xmlDoc.getElementsByTagName('author');
 	};
-
-
 </script>
 
 </body>
