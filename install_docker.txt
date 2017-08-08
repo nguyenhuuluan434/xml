@@ -5,3 +5,7 @@ apt-cache policy docker-ce
 apt-get install docker-ce
 systemctl status docker
 docker ps
+
+
+#start nginx with docker volume
+

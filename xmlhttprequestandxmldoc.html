@@ -19,7 +19,7 @@
 						myFunction(this);
 					}
 				};
-				xmlhttprequest.open("GET","http://vnexpress.net/rss/tin-moi-nhat.rss",true);
+				xmlhttprequest.open("GET","http://61.28.226.170/menu.xml",true);
 				xmlhttprequest.send()
 			};
 
@@ -27,11 +27,11 @@
 				var x,xmlDoc, txt;
 				xmlDoc = xml.responseXML;
 				txt ="";
-				x = xmlDoc.getElementsByTagName('ARTIST');
-				/*for (var i = 0; i < x.length; i++) {
+				x = xmlDoc.getElementsByTagName('name');
+				for (var i = 0; i < x.length; i++) {
 					txt += 	x[i].childNodes[0].nodeValue + "<br>"
-				}*/
-				document.getElementById('demo').innerHTML= x;
+				}
+				document.getElementById('demo').innerHTML= txt;
 			};
 		</script>
 
