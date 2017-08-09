@@ -43,6 +43,7 @@
 			document.getElementById('demo').innerHTML = table;
 
 			var newElement = xmlDoc.createElement('CD');
+			newElement.appendChild('TITLE');
 			var x = xmlDoc.getElementsByTagName("CATALOG")[0];
 			x.appendChild(newElement);
 			console.log(xmlData);
