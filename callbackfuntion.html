@@ -27,7 +27,7 @@
 			document.getElementById('demo').innerHTML = xhttp.responseText + "  "+ xhttp.getAllResponseHeaders();
 		}
 		function displayXML(url) {
-			xhttp = new XMLHttpRequest();
+			var xhttp = new XMLHttpRequest();
 			var txt;
 			if (xhttp.readyState==4 && xhttp.status ==200) {
 				xmlDoc = xhttp.responseXML;
