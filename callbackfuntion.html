@@ -31,7 +31,8 @@
 				xhttp.open("GET",url,true);
 				xhttp.send();
 				var txt;
-				artist = xhttp.responseXML.getElementsByTagName('Aartist');
+				xmlDoc = xhttp.responseXML;
+				artist = xmlDoc.getElementsByTagName('Aartist');
 
 				for (var i = artist.length - 1; i >= 0; i--) {
 					txt += artist[i].childNodes[0].nodeValue + "<br>";
