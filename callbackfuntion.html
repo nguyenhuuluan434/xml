@@ -21,7 +21,8 @@
 			xhttp.send()
 		}
 		function myFunction(xhttp) {
-			document.getElementById('demo').innerHTML = xhttp.responseText;
+
+			document.getElementById('demo').innerHTML = xhttp.responseText + "  "+ xhttp.getAllResponseHeaders;
 		}	
 	</script>
 </body>
