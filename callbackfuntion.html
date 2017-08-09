@@ -31,7 +31,7 @@
 			var txt;
 			if (xhttp.readyState==4 && xhttp.status ==200) {
 				xmlDoc = xhttp.responseXML;
-				artist = xmlDoc.getElementsByTagName('Aartist');
+				artist = xmlDoc.getElementsByTagName('ARTIST');
 				console.log(artist);
 				for (var i = artist.length - 1; i >= 0; i--) {
 					txt += artist[i].childNodes[0].nodeValue + "<br>";
