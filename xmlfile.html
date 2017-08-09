@@ -43,10 +43,6 @@
 			document.getElementById('demo').innerHTML = table;
 
 			var newElement = xmlDoc.createElement('CD');
-			var title = newElement.createElement('TITLE');
-			newElement.appendChild(title);
-			var artist = newElement.createElement('ARTIST');
-			newElement.appendChild(artist);
 			var x = xmlDoc.getElementsByTagName("CATALOG")[0];
 			x.appendChild(newElement);
 			console.log(xmlData);
