@@ -15,12 +15,7 @@
 					/*document.getElementById("demo").innerHTML = this.responseXML;*/
 					data=this.responseXML.getElementsByTagName('bookstore');
 					console.log(data);
-					console.log(data[0].firstChild);
-					console.log(data[0].lastChild);
-					for (var i = data.length - 1; i >= 0; i--) {
-						console.log(data[i]);
-					}
-					//console.log(data.childNodes.length);	
+
 				}
 			};
 			xhttp.open("GET", "http://61.28.226.170/book.xml", true);
