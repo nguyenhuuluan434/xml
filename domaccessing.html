@@ -14,7 +14,10 @@
 				if (this.readyState ==4 && this.status == 200) {
 					/*document.getElementById("demo").innerHTML = this.responseXML;*/
 					data=this.responseXML.getElementsByTagName('title');
-					console.log(data)
+
+					for (var i = data.length - 1; i >= 0; i--) {
+						onsole.log(data[i])
+					}
 					
 				}
 			};
