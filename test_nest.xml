@@ -1,0 +1,21 @@
+<<?xml version="1.0" encoding="UTF-8"?>
+	<root>
+		<root_lv1 locate="Asia">
+			<root_lv2 locate="Asian">
+				<root_lv3>
+					VietNam
+				</root_lv3>
+				<root_lv3>
+					Lao
+				</root_lv3>
+			</root_lv2>
+			<root_lv2 locate="North-Korea">
+				<root_lv3>
+					Japan
+				</root_lv3>
+				<root_lv3>
+					China
+				</root_lv3>
+			</root_lv2>
+		</root_lv1>
+	</root>
