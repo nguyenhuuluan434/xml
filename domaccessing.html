@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="demo"></h1>
+	<button type="button" onclick="myFunciton()">button 1</button>
+	<script type="text/javascript">
+		function myFunciton() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				console.log(this.readyState)
+				if (this.readyState ==4 && this.status == 200) {
+					document.getElementById("demo").innerHTML = this.XML;
+					
+				}
+			};
+			xhttp.open("GET", "http://61.28.226.170/book.xml", true);
+			xhttp.send();
+		}
+	</script>
+
+</body>
+</html>
