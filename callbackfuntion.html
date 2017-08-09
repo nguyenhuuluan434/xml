@@ -31,12 +31,13 @@
 			xhttp.open("GET",url,true);
 			xhttp.send();
 			var txt;
-			artist = xhttp.getElementsByTagName('Aartist )
-				for (var i = artist.length - 1; i >= 0; i--) {
-					txt + = artist[i].childNodes[0].nodeValue + "<br>";
-				}
-				document.getElementById('demo').innerHTML=txt;
+			artist = xhttp.getElementsByTagName('Aartist');
+
+			for (var i = artist.length - 1; i >= 0; i--) {
+				txt + = artist[i].childNodes[0].nodeValue + "<br>";
 			}
-		</script>
-	</body>
-	</html>
+			document.getElementById('demo').innerHTML=txt;
+		}
+	</script>
+</body>
+</html>
