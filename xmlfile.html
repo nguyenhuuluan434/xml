@@ -41,9 +41,9 @@
 
 			document.getElementById('demo1').innerHTML = xmlData[0].getElementsByTagName('COUNTRY')[0].childNodes[0].attributes;
 			document.getElementById('demo').innerHTML = table;
-			var newElement = xmlDoc.createElement('edition');
-			
-			var x = xmlDoc.getElementsByTagName("CD")[0];
+
+			var newElement = xmlDoc.createElement('CD');
+			var x = xmlDoc.getElementsByTagName("CATALOG")[0];
 			x.appendChild(newElement);
 			console.log(xmlData);
 			console.log(x);
