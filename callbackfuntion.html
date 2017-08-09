@@ -10,35 +10,37 @@
 	<button id="button2" onclick="loadDoc('http://61.28.226.170/xmldata.xml',myFunction)">button 2</button>
 	<button id="button3" onclick="displayXML('http://61.28.226.170/cd_catalog.xml')">button 3</button>
 
-		<script type="text/javascript">
+	<script type="text/javascript">
 
-			function loadDoc(url,cFunction) {
-				var xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function () {
-					if (this.readyState==4 && this.status ==200) {
-						cFunction(this)
-					}
-				}
-				xhttp.open("GET",url,true);
-				xhttp.send()
-			}
-			function myFunction(xhttp) {
+		function loadDoc(url,cFunction) {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function () {
 
-				document.getElementById('demo').innerHTML = xhttp.responseText + "  "+ xhttp.getAllResponseHeaders();
+				cFunction(this)
 			}
-			function displayXML(url) {
-				xhttp = new XMLHttpRequest();
-				xhttp.open("GET",url,true);
-				xhttp.send();
-				var txt;
-				xmlDoc = xhttp.responseXML;
-				artist = xmlDoc.getElementsByTagName('Aartist');
+		}
+		xhttp.open("GET",url,true);
+		xhttp.send()
+	}
+	function myFunction(xhttp) {
 
-				for (var i = artist.length - 1; i >= 0; i--) {
-					txt += artist[i].childNodes[0].nodeValue + "<br>";
-				}
-				document.getElementById('demo').innerHTML=txt;
+		document.getElementById('demo').innerHTML = xhttp.responseText + "  "+ xhttp.getAllResponseHeaders();
+	}
+	function displayXML(url) {
+		xhttp = new XMLHttpRequest();
+		var txt;
+		if (xhttp.readyState==4 && xhttp.status ==200) {
+			xmlDoc = xhttp.responseXML;
+			artist = xmlDoc.getElementsByTagName('Aartist');
+
+			for (var i = artist.length - 1; i >= 0; i--) {
+				txt += artist[i].childNodes[0].nodeValue + "<br>";
 			}
-		</script>
-	</body>
-	</html>
+			document.getElementById('demo').innerHTML=txt;
+		}
+		xhttp.open("GET",url,true);
+		xhttp.send();
+	}
+</script>
+</body>
+</html>
