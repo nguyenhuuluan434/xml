@@ -6,8 +6,10 @@
 <body>
 	<h1> the XMLHttpRequest Object</h1>
 	<div id="demo">Content in here will change</div>
-	<button id="button" onclick="loadDoc('http://61.28.226.170/menu.xml',myFunction)">button 1</button>
-	<button id="button" onclick="loadDoc('http://61.28.226.170/xmldata.xml',myFunction)">button 2</button>
+	<button id="button1" onclick="loadDoc('http://61.28.226.170/menu.xml',myFunction)">button 1</button>
+	<button id="button2" onclick="loadDoc('http://61.28.226.170/xmldata.xml',myFunction)">button 2</button>
+	<button id="button3" onclick="loadDoc('http://61.28.226.170/cd_catalog.xml',myFunction)">button 2</button>
+
 	<script type="text/javascript">
 
 		function loadDoc(url,cFunction) {
@@ -23,7 +25,18 @@
 		function myFunction(xhttp) {
 
 			document.getElementById('demo').innerHTML = xhttp.responseText + "  "+ xhttp.getAllResponseHeaders();
-		}	
-	</script>
-</body>
-</html>
+		}
+		function displayXML(url) {
+			xhttp = new XMLHttpRequest();
+			xhttp.open("GET",url,true);
+			xhttp.send();
+			var txt;
+			artist = xhttp.getElementsByTagName('Aartist )
+				for (var i = artist.length - 1; i >= 0; i--) {
+					txt + = artist[i].childNodes[0].nodeValue + "<br>";
+				}
+				document.getElementById('demo').innerHTML=txt;
+			}
+		</script>
+	</body>
+	</html>
