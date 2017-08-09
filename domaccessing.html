@@ -16,10 +16,10 @@
 					var data=this.responseXML.getElementsByTagName('book');
 					console.log(data.length);
 					for (var i = data.length - 1; i >= 0; i--) {
-/*						console.log(data[i].getElementsByTagName('title'));
+						console.log(data[i].getElementsByTagName('title'));
 						console.log(data[i].getElementsByTagName('title')[0]);
 						console.log(data[i].getElementsByTagName('title')[0].nodeName);
-						console.log(data[i].getElementsByTagName('title')[0].nodeValue);*/
+						console.log(data[i].getElementsByTagName('title')[0].nodeValue);
 						console.log(data[i].getElementsByTagName('title')[0].attributes);
 					}
 				}
