@@ -14,11 +14,11 @@
 				if (this.readyState == 4 && this.status == 200) {
 					/*document.getElementById("demo").innerHTML = this.responseXML;*/
 					data=this.responseXML.getElementsByTagName('bookstore')[0];
-
+					console.log(data.length);
 					for (var i = data.length - 1; i >= 0; i--) {
-						console.log(data[i].nodeType)
+						console.log(data[i].nodeType);
 					}
-					console.log(data.childNodes.length)	
+					console.log(data.childNodes.length);	
 				}
 			};
 			xhttp.open("GET", "http://61.28.226.170/book.xml", true);
