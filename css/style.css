@@ -1,49 +1,5 @@
 body{
 	font-size: 12pt;
 	color: rgb(100%,0%,0%);
-	background-color: rgb(1%,01%,10%);;
-}
-#top {
-	background-color: #ccc;
-	padding: 20px
-}
-
-.intro {
-	color: red;
-	font-weight: bold;
-}
-#jam{
-	font-size: 1em;
-}
-a:link {
-	color: blue;
-}
-
-a:visited {
-	color: black;
-}
-a:active {
-	color: red;
-}
-
-a:hover {
-	text-decoration: none;
-	color: blue;
-	background-color: yellow;
-}
-p:first-child {
-	font-weight: bold;
-	font-size: 40px;
-}
-p {
-	font-size: 12px;
-}
-
-p:first-letter {
-	font-size: 24px;
-	float: left;
-}
-
-p:first-line {
-	font-weight: bold;
+	background-color: rgb(1%,01%,10%);
 }
