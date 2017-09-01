@@ -15,9 +15,18 @@ body{
 	font-size: 15em;
 }
 a:link {
-    color: blue;
+	color: blue;
 }
 
 a:visited {
-    color: purple;
+	color: purple;
+}
+a:active {
+	color: red;
+}
+
+a:hover {
+	text-decoration: none;
+	color: blue;
+	background-color: yellow;
 }
