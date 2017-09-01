@@ -14,3 +14,10 @@ body{
 #jam{
 	font-size: 15em;
 }
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
