@@ -30,3 +30,7 @@ a:hover {
 	color: blue;
 	background-color: yellow;
 }
+p:first-child {
+	font-weight: bold;
+	font-size: 40px;
+}
