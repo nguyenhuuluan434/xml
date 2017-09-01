@@ -11,6 +11,6 @@ body{
 	color: red;
 	font-weight: bold;
 }
-p.jam{
+p#jam{
 	font-size: 5em;
 }
