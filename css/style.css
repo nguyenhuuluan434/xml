@@ -3,5 +3,6 @@ body{
 	color: rgb(100%,0%,0%);
 }
 p{
-	background-color:rgb(10%,40%,50%);;
+	background-color:rgb(10%,40%,50%);
+	font-weight: bolder;
 }
